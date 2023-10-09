@@ -11,7 +11,7 @@ class AVLNode {
 }
 
 class AVLTree {
-    AVLNode root;
+    AVLNode root; // Nó raiz da árvore!
 
     public AVLTree() {
         root = null;
@@ -57,7 +57,7 @@ class AVLTree {
         return y;
     }
 
-    public void insert(int key) {
+    public void insert(int key) { // Insere um novo elemento com a chave(key) mantendo o equilíbrio da árvore pelas rotações mais abaixo
         root = insertRec(root, key);
     }
 
@@ -99,7 +99,7 @@ class AVLTree {
         return root;
     }
 
-    public boolean search(int key) {
+    public boolean search(int key) { // Realiza a busca na árvore procurando um elemento com a chave, como é boolean irá retornar True se achar, False caso não
         return searchRec(root, key);
     }
 
@@ -116,7 +116,7 @@ class AVLTree {
         return searchRec(root.right, key);
     }
 
-    public void delete(int key) {
+    public void delete(int key) { // Seguindo a mesma lógica para manter o equilíbrio da árvore abaixo, deleta o elemento que tiver a chave.
         root = deleteRec(root, key);
     }
 
